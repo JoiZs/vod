@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import BgImg from "./assets/universal/BACKGROUND_GRADIENT.png";
+import MainLogo from "./assets/images/Rectangle 1.png";
+import logo from "./assets/logos/VODA WORLD_LOGO_LIGHT@4x.png";
+import mainImage from "./assets/images/HOMEPAGE_TRENDY-GUY.png";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className="container"
+      style={{ backgroundImage: `url(${BgImg})`, backgroundSize: "cover" }}
+    >
+      <div className="logo">
+        <img src={logo} alt="Logo" />
+      </div>
+      <div className="content">
+        <p className="welcome"> Welcome to your world</p>
+        <div className="flower-container">
+          <img src={mainImage} className="mainImage" alt="mainimg" />
+          <div className="overlap-rectangle">
+            <img src={MainLogo} alt="Flower" />
+          </div>
+        </div>
+        <button className="enter-button">ENTER</button>
+      </div>
     </div>
   );
 }
